@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+            const coridante =[-100,150,-32,-20,90,-50];
+          console.log(coridante);
+
+        const arr1 = coridante.filter(x => x < 0);
+         console.log(arr1);
+
+        // //convert negative numbers to positive number of an array
+        const arr2 = arr1.map(y => Math.abs(y));
+         console.log(arr2);
+
+        // //pipeline method
+        coridante.filter(i => i < 0).map(i => Math.abs(i)).forEach(i => console.log(i));
+    </script>
+
+
+</body>
+</html>

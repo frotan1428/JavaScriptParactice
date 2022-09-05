@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <input type="text" name="" id="textNot1" placeholder="Enter first Point">
+        <input type="text" name="" id="textNot2" placeholder="Enter Scenod Point">
+        <button id="btn">Count</button>
+        <h3 id="reslut">Year of Result<span id="reslut"></span></h3>
+
+
+        <script>
+           document.querySelector("#btn").addEventListener("click",()=>{
+           let not1= document.querySelector("#textNot1");
+           let not2= document.querySelector("#textNot2");
+
+           if(!not1.value || isNaN(not1.value) || not1.value<0 || not1.value>100){
+            alert("Please Enter a valid Points for First Number");
+            not1.focus();
+            not1.value="";
+            return;
+
+           }
+
+           if(!not2.value || isNaN(not2.value) || not2.value<0 || not2.value>100){
+            alert("Please Enter a valid Points for second Number");
+            not2.focus();
+            not2.value="";
+            return;
+
+           }
+
+           not1= Number(not1.value);
+           not2=Number(not2.value);
+
+           const average = (not1+not2)/2;
+
+           let Letter= "";
+           
+
+           switch (true) {
+            case average>=90:
+                Letter ="A";
+            break;
+            case average>=80:
+            Letter ="B";
+            break;
+            case average>=70:
+            Letter ="C";
+            break;
+            case average>=50:
+            Letter ="D";
+            default:
+               Letter ="F";
+           }
+
+           document.querySelector("#reslut").innerHTML=Letter;
+           
+           });
+        </script>
+
+</body>
+</html>

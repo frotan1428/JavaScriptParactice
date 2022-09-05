@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <input type="text" name="" id="salary">
+    <button  onclick="Pay()"> Count</button>
+
+    <label id="result"></label>
+
+
+    <script>
+        function Pay(){
+            let sallary=document.querySelector("#salary").value;
+            let result= sallary>1000 ? (sallary>2000 ? "very Good": "Good") : "bad Salary";
+            document.querySelector("#result").innerHTML=result;
+        }
+    </script>
+</body>
+</html>

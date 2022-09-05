@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn">Count</button>
+    <label id="lebel"></label>
+    <ul id="list" style="list-style-type: none;">
+        
+    </ul>
+<script>
+    const arr=[
+        {
+        city :"california",
+        pupulation: 2000000
+         },
+         {
+        city :"Texas",
+        pupulation: 50000
+         },
+         {
+        city :"New  York",
+        pupulation: 400000
+         },
+
+         {
+        city :"Cgigago",
+        pupulation: 3000000
+         }
+    ]
+  
+      document.querySelector("#btn").addEventListener("click",()=>{
+        let AevragePupulation=0;
+        arr.forEach((item)=>{
+            AevragePupulation+= item.pupulation;
+        })
+         AevragePupulation /= arr.length;
+
+         let listItem="";
+         arr.forEach((item)=>{
+            listItem += `<li> ${item.city}  ${item.pupulation - AevragePupulation}</li> `
+        })
+
+        document.querySelector("#lebel").innerHTML=AevragePupulation;
+        document.querySelector("#list").innerHTML=listItem;
+
+
+      })  
+
+     
+     
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select id="title"> 
+    </select>
+    <script>
+
+        const friuts= ["apple","Pear","orange","banana","Pear","grap"];
+        document.querySelector("#title").innerHTML = "<option>" + friuts.join("</option><option>") +"</option>";
+
+       
+        console.log( friuts.slice(2));
+
+        console.log(friuts.toString())
+
+        console.log(friuts.indexOf("Pear"));
+        console.log(friuts.lastIndexOf("Pear"));
+
+        const number=[4,5,6,7,8];
+        const char=["a","b","3"];
+        const concatTogether=number.concat(char,4,5,6).concat(number);
+        console.log(concatTogether)
+
+    </script>
+</body>
+</html>

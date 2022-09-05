@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const friuts= ["Apple","Pear","orange","banana","grap"];
+        friuts.pop();//grap
+        console.log(friuts);
+        friuts.push("mandarins","grapefruits")
+        console.log(friuts)
+        friuts.shift()
+        console.log(friuts)
+        friuts.unshift("grapefruits");
+        console.log(friuts)
+        friuts.reverse();
+        console.log(friuts)
+
+        friuts.sort();
+        console.log(friuts)
+
+    
+
+        friuts.sort((a,b) => b.localeCompare(a,"tr")).reverse();
+        console.log(friuts)
+
+        friuts.splice(2,0,"aprictot");
+        console.log(friuts)
+
+        const number =[11,5,38,14,9,5,5];
+        console.log(number.sort((a,b)=> a-b));
+       
+    </script>
+</body>
+</html>

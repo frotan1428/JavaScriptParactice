@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn">Class AVerage</button>
+    <label id="lebel"></label>
+    <ul id="list" style="list-style-type: none;">
+        
+    </ul>
+<script>
+    const students=[
+        {
+        name :"Ali Can",
+        score: 90
+         },
+         {
+            name: "John",
+            score:89
+         },{
+            name:"alex",
+            score:95
+         },{
+            name:"paul",
+            score:88
+         },
+         {
+            name:"Max",
+            score:100
+         }
+    ]
+  
+      document.querySelector("#btn").addEventListener("click",()=>{
+        let ClassAverage=0;
+        students.forEach((item)=>{
+            ClassAverage+= item.score;
+        })
+
+        ClassAverage /= students.length;
+
+
+         let listStuents="";
+         students.forEach((item)=>{
+           
+            listStuents += `<li> ${item.name}  ${item.score}</li> `
+        })
+
+        document.querySelector("#lebel").innerHTML=ClassAverage;
+        document.querySelector("#list").innerHTML=listStuents;
+
+
+      })  
+
+     
+     
+</script>
+
+
+</body>
+</html>

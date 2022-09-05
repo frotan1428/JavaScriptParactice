@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        /*
+       
+
+        */
+        const sudents=["Ahmet","Can","Mustafa","Cem","Salih"];
+        let joins= " ";
+        for (let student of sudents) {
+          joins +=student + " ";
+            
+        }
+        console.log(joins)
+
+        // we can access with index and an elemnt
+        for (let [index,student] of sudents.entries()) {
+
+            console.log(`${index+1}  ${student}`)
+        
+        }
+      
+
+        // for (const iterator of "Mohammad FROTAN") {
+        //     console.log(iterator)
+            
+        // }
+       
+    </script>
+</body>
+</html>

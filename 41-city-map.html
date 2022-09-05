@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <label id="lebel"></label>
+    <ul id="list" style="list-style-type: none;">
+        
+    </ul>
+<script>
+    const city=[
+        {
+        city :"california",
+        pupulation: 2000000
+         },
+         {
+        city :"Texas",
+        pupulation: 50000
+         },
+         {
+        city :"New  York",
+        pupulation: 400000
+         },
+
+         {
+        city :"Cgigago",
+        pupulation: 3000000
+         }
+    ]
+  
+
+    const newCity= city.map((item)=>{
+
+            item.pupulation *=1.1;
+            return item;
+    });
+    console.log(newCity)
+    let ListCity="";
+    newCity.forEach((item)=>{
+        ListCity +=`<li>${Math.round(item.pupulation)}</li>`;
+    })
+
+    document.querySelector("#list").innerHTML=ListCity;
+  
+</script>
+
+
+</body>
+</html>
